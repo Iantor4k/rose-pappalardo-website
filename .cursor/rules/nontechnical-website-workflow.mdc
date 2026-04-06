@@ -18,3 +18,13 @@ Use plain language and keep instructions beginner-friendly.
 - Only run `git add`, `git commit`, and `git push origin main` when the user **clearly asks** to publish or save to GitHub — for example: “push this,” “deploy,” “put it live,” “publish to the site,” “commit and push,” or similar.
 - When they do ask, use a clear, descriptive commit message. If the request is ambiguous, ask once what they want committed.
 - If push fails, explain the issue simply and give a direct next step.
+
+## Local preview (before deploy)
+
+When the user asks to **preview** the site (or similar: “show me locally,” “let me see it before it goes live,” “open a preview”), **start a local static server** for them instead of only explaining steps:
+
+- From the project root (`Rose_Website`), run in the background: `python3 -m http.server 8000`
+- If port **8000** is already in use, use **8001** (or the next free port) instead.
+- Tell them in plain language to open **http://localhost:8000** (home) and **http://localhost:8000/gallery.html** (gallery), adjusting the port if needed.
+- Remind them this is **only on their computer** — nothing is deployed until they ask to push to GitHub.
+- To stop the server: **Ctrl+C** in that terminal, or they can ask you to stop it.
