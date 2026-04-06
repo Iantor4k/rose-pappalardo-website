@@ -8,13 +8,13 @@ alwaysApply: true
 Use plain language and keep instructions beginner-friendly.
 
 - Assume the user may not know Git or terminal commands.
-- Before making edits, sync latest code with `git pull --rebase origin main`.
-- After edits, quickly verify changed pages still load and links still work.
+- Before making edits, sync latest code with `git pull --rebase origin main` (unless the user is only asking a question with no file changes).
+- After edits, quickly verify changed pages still load and links still work when practical.
 - Explain what changed in simple terms and list edited files.
-- After every change, always run the full Git steps without waiting to be asked:
-  - `git add -A`
-  - `git commit -m "<clear, simple message>"`
-  - `git push origin main`
-- Choose a clear, descriptive commit message automatically — no need to ask for confirmation unless the change is ambiguous.
-- If push fails, explain the issue simply and give a direct next step.
 
+## Git and deploys (Netlify, etc.)
+
+- **Do not** automatically `git commit` or `git push` after every change.
+- Only run `git add`, `git commit`, and `git push origin main` when the user **clearly asks** to publish or save to GitHub — for example: “push this,” “deploy,” “put it live,” “publish to the site,” “commit and push,” or similar.
+- When they do ask, use a clear, descriptive commit message. If the request is ambiguous, ask once what they want committed.
+- If push fails, explain the issue simply and give a direct next step.
