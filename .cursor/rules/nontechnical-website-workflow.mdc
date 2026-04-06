@@ -1,0 +1,20 @@
+---
+description: Simple workflow for non-technical website updates
+alwaysApply: true
+---
+
+# Website Update Workflow
+
+Use plain language and keep instructions beginner-friendly.
+
+- Assume the user may not know Git or terminal commands.
+- Before making edits, sync latest code with `git pull --rebase origin main`.
+- After edits, quickly verify changed pages still load and links still work.
+- Explain what changed in simple terms and list edited files.
+- After every change, always run the full Git steps without waiting to be asked:
+  - `git add -A`
+  - `git commit -m "<clear, simple message>"`
+  - `git push origin main`
+- Choose a clear, descriptive commit message automatically — no need to ask for confirmation unless the change is ambiguous.
+- If push fails, explain the issue simply and give a direct next step.
+
