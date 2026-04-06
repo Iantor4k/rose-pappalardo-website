@@ -157,6 +157,27 @@
       opacity: 0.95;
     }
 
+    /* ── "As the Light Passes Through" — displayed as vertical (portrait) ── */
+    #artwork-light .img-wrap {
+      aspect-ratio: 35 / 60;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #artwork-light .img-wrap img {
+      position: absolute;
+      width: 175%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      transition: opacity 0.4s ease;
+    }
+
+    #artwork-light .img-wrap:hover img {
+      opacity: 0.95;
+    }
+
     .artwork .info {
       margin-top: 16px;
     }
@@ -321,7 +342,7 @@
       </div>
     </div>
 
-    <div class="artwork" data-title="As the Light Passes Through">
+    <div class="artwork" id="artwork-light" data-title="As the Light Passes Through">
       <div class="img-wrap" onclick="openLightbox(1)">
         <img loading="lazy" src="images/IMG_6803.jpeg" alt="As the Light Passes Through by Rose Pappalardo">
       </div>
